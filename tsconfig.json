@@ -6,6 +6,6 @@
     "strict": true,
     "strictNullChecks": true
   },
-  "include": ["./", "./**/*.ts", "./**/*.js", "src/**/*.json","core/**/*.ts"],
+  "include": ["./", "./**/*.ts", "./**/*.js", "src/**/*.json", "core/**/*.ts"],
   "exclude": ["node_modules/", "build/", "dist/", ".cache/", ".tmp/", "src/admin/", "src/plugins/**"]
 }
