@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "singularName": "note",
+    "pluralName": "notes",
+    "displayName": "Note"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "notes_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::notes-group.notes-group",
+      "inversedBy": "notes"
+    },
+    "is_finished": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

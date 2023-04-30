@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes_groups",
+  "info": {
+    "singularName": "notes-group",
+    "pluralName": "notes-groups",
+    "displayName": "Notes Group"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "notes_groups"
+    },
+    "notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::note.note",
+      "mappedBy": "notes_group"
+    }
+  }
+}
